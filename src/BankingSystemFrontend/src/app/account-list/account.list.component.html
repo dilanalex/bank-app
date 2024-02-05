@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="main">
+        <div class="container">
+            <div class="header-margin"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tim-title text-center">
+                        <h2>Account Management</h2>
+                    </div>
+                </div>
+            </div>
+            <a routerLink="/admin/account-create" class="nav-link"><button type="button" class="btn btn-danger btn-round">Create Account</button></a>
+            <div class="row row-display">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Account Id</th>
+                                <th>Account Number</th>
+                                <th>Balance</th>
+                            </tr>
+                            </thead>
+                            <tbody *ngFor="let account of accounts; index as i ">
+                            <tr>
+                                <td>{{i+1}}</td>
+                                <td>{{account.id}}</td>
+                                <td>{{account.accountNo}}</td>
+                                <td>{{account.balance}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
